@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mathis ANGIBAUD | Web Developper</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Amaranth:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
+</head>
+<body>
+
+<div class="warning">
+    <p>This website is not optimized for mobiles. Try to connect on with a computer.</p>
+</div>
+
+<div class="infos">
+
+    <hr class="vr">
+
+    <div class="personnal">
+        <h1 id="title">Mathis Angibaud</h1>
+        <div class="undertext"></div>
+        <p id="details">i'm looking for a professional training contract</p>
+    </div>
+
+    <hr class="vr">
+
+    <div class="social">
+        <p>my site is under construction, you can contact me on my social media</p>
+        <div class="link">
+            <a href="https://twitter.com/AngibaudMathis" target="_blank">
+                <span class="underline--magical">Twitter</span>
+            </a>
+            <a href="https://www.instagram.com/mathis_ang/" target="_blank">
+                <span class="underline--magical">Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/in/mathisangibaud/" target="_blank">
+                <span class="underline--magical">LinkedIn</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<div class="projects">
+
+    <section id="one">
+        <a href="https://wc2018.mathisangibaud.fr" target="_blank">
+        <img src="images/wc18.jpg" />
+        </a>
+    </section>
+
+    <hr>
+
+    <section id="two">
+        <a href="https://ouesthabitatconseil.fr" target="_blank">
+        <img src="images/btp.jpg" />
+        </a>
+    </section>
+
+    <hr>
+
+    <section id="three">
+        <a href="https://mathisangibaud.fr/choose/" target="_blank">
+        <img src="images/choose.jpg" />
+        </a>
+    </section>
+
+    <hr>
+
+    <section id="four">
+        <a href="https://www.youtube.com/watch?v=LBHoR3r7BvY" target="_blank">
+        <img src="images/zoo.jpg" />
+        </a>
+    </section>
+
+</div>
+<script>
+    // Some random colors
+    const colors = ["#80D0C7", "#51b9d4", "#25a5df", "#0093E9"];
+
+    const numBalls = 20;
+    const balls = [];
+
+    for (let i = 0; i < numBalls; i++) {
+        let ball = document.createElement("div");
+        ball.classList.add("ball");
+        ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+        ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+        ball.style.top = `${Math.floor(Math.random() * 70)}%`;
+        ball.style.transform = `scale(${Math.random()})`;
+        ball.style.width = `${Math.random()}em`;
+        ball.style.height = ball.style.width;
+
+        balls.push(ball);
+        document.body.append(ball);
+    }
+
+    // Keyframes
+    balls.forEach((el, i, ra) => {
+        let to = {
+            x: Math.random() * (i % 2 === 0 ? -11 : 11),
+            y: Math.random() * 12
+        };
+
+        let anim = el.animate(
+            [
+                { transform: "translate(0, 0)" },
+                { transform: `translate(${to.x}rem, ${to.y}rem)` }
+            ],
+            {
+                duration: (Math.random() + 1) * 2000, // random duration
+                direction: "alternate",
+                fill: "both",
+                iterations: Infinity,
+                easing: "ease-in-out"
+            }
+        );
+    });
+</script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

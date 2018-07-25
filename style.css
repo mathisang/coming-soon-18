@@ -1,0 +1,338 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #17171d;
+    color: #ebebeb;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Amaranth", sans-serif;
+    font-size: 3rem;
+    margin-top: 3rem;
+    opacity: 0;
+    animation: textanim .75s ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes textanim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.undertext {
+    height: .25rem;
+    width: 0;
+    background: linear-gradient(90deg,#80D0C7 0,#0093E9 100%);
+    border-radius: 5px;
+    margin-bottom: .8rem;
+    animation: underanim 1s ease-in-out;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes underanim {
+    0% {
+        width: 0;
+        height: .25rem;
+    }
+
+    100% {
+        width: 16rem;
+        height: .25rem;
+    }
+}
+
+.personnal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.personnal p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    opacity: 0;
+    animation: textanim .75s ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.vr {
+    height: 1px;
+    width: 0;
+    border: none;
+    background: rgba(255, 255, 255, .7);
+    animation: vranim 1s ease-in-out;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes vranim {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.projects {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    z-index: 500;
+}
+
+.social {
+    position: absolute;
+    bottom: 35%;
+}
+
+.social p {
+    opacity: 0;
+    animation: textanim .75s ease-in-out;
+    animation-delay: 3.75s;
+    animation-fill-mode: forwards;
+}
+
+
+.link {
+    display: flex;
+    justify-content: center;
+}
+
+.link a {
+    font-size: .9rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.link a:nth-child(1) {
+    opacity: 0;
+    animation: textanim .75s ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.link a:nth-child(2) {
+    opacity: 0;
+    animation: textanim .75s ease-in-out;
+    animation-delay: 3.25s;
+    animation-fill-mode: forwards;
+}
+
+.link a:nth-child(3) {
+    opacity: 0;
+    animation: textanim .75s ease-in-out;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+
+.underline--magical {
+    padding: 0 .2rem .1rem;
+    background-image: linear-gradient(90deg,#80D0C7 0,#0093E9 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 88%;
+    transition: background-size 0.25s;
+}
+
+.underline--magical:hover {
+    background-size: 100% 88%;
+}
+
+.infos {
+    height: 70%;
+    width: 100%;
+    box-shadow: 0 10px 50px 20px #17171d;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projects section {
+    width: 25%;
+    height: 0;
+    background-size: cover;
+    overflow: hidden;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.projects #one {
+    position: relative;
+    top: 2rem;
+    opacity: 0;
+    animation: imganim .75s ease-in-out;
+    animation-delay: 4.5s;
+    animation-fill-mode: forwards;
+}
+
+.projects #two {
+    position: relative;
+    top: 2rem;
+    opacity: 0;
+    animation: imganim .75s ease-in-out;
+    animation-delay: 4.75s;
+    animation-fill-mode: forwards;
+}
+
+.projects #three {
+    position: relative;
+    top: 2rem;
+    opacity: 0;
+    animation: imganim .75s ease-in-out;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+
+.projects #four {
+    position: relative;
+    top: 2rem;
+    opacity: 0;
+    animation: imganim .75s ease-in-out;
+    animation-delay: 5.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes imganim {
+    0% {
+        height: 0;
+        opacity: 0;
+        top: 2rem;
+    }
+
+    10% {
+        height: 100%;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+        height: 100%;
+    }
+}
+
+.projects section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: .5;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.projects section:hover img {
+    opacity: 1;
+}
+
+.projects section:hover {
+    width: 32%;
+}
+
+.projects section:hover, .projects section img:hover, .projects section a:hover {
+    cursor: url("images/hover.cur"), url("images/hover.png"), pointer;
+}
+
+.projects hr {
+    height: 0;
+    width: 1px;
+    border: none;
+    background: rgba(255, 255, 255, .7);
+    position: relative;
+    top: -8px;
+    z-index: 999;
+}
+
+.projects hr:nth-child(2) {
+    animation: hranim .75s ease-in-out;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+.projects hr:nth-child(4) {
+    animation: hranim .75s ease-in-out;
+    animation-delay: 4.3s;
+    animation-fill-mode: forwards;
+}
+
+
+.projects hr:nth-child(6) {
+    animation: hranim .75s ease-in-out;
+    animation-delay: 4.6s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes hranim {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.warning {
+    text-align: center;
+    display: none;
+}
+
+@media screen AND (max-width: 580px){
+
+    .warning {
+        display: block;
+    }
+
+    .infos, .projects {
+        display: none;
+    }
+}
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0;
+    animation: ballanim 1s ease-in-out;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ballanim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
